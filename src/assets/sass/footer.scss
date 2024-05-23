@@ -1,0 +1,25 @@
+@use 'partials/variables' as var;
+
+footer{
+    align-items: center;
+    background-color: var.$color-light;
+    border-top: .14rem solid var.$color-dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 4rem 2rem;
+
+    a{
+        align-items: center;
+        color: var.$color-dark;
+        display: flex;
+        gap: .5rem;
+        justify-content: center;
+        flex-direction: column;
+        font-size: .85rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-align: center;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,145 @@
+@use 'partials/variables' as var;
+@use 'header';
+@use 'articles';
+@use 'products';
+@use 'footer';
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var.$main-font;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    position: relative;
+
+    main{
+        align-items: center;
+        background-color: var.$color-primary;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        gap: 3rem;
+        justify-content: center;
+        padding: 6rem 0;
+
+        .toggleView__btn{
+            align-self: center;
+            background-color: var.$color-light;
+            border: .14rem solid var.$color-dark;
+            border-radius: .4rem;
+            box-shadow: .2rem .2rem 0 0 var.$color-dark;
+            color: var.$color-dark;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: .75rem 1.5rem;
+            transition: .2s;
+            max-width: 640px;
+            width: 80%;
+        
+            &:hover{
+                transform: scale(.96);
+            }
+            
+            &:active{
+                box-shadow: .1rem .1rem 0 0 var.$color-dark;
+                opacity: .85;
+                transform: scale(.9);
+            }
+        }
+    }
+
+    @keyframes slideInFromBottom{
+        from{
+            transform: translateY(100%);
+        }
+        to{
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes slideInFromRightSide{
+        from{
+            transform: translateX(100%);
+        }
+        to{
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes reduceBannerHeight{
+        20%{
+            opacity: 0;
+        }
+        
+        40%{
+            height: 500px;
+        }
+    
+        60%{
+            height: 480px;
+        }
+        
+        80%{
+            height: 240px;
+        }
+        
+        100%{
+            opacity: 0;
+            height: 120px;
+            visibility: hidden;
+        }
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    .hidden{
+        display: none !important;
+    }
+
+    .open{
+        animation: slideInFromBottom .4s forwards;
+        transition: .3s;    
+    }
+
+    .openFromRight{
+        animation: slideInFromRightSide .4s forwards;
+        transition: .3s;    
+    }
+
+    .reduceBanner{
+        animation: reduceBannerHeight .2s forwards;
+    }
+
+    .displayChange{
+        align-self: center;
+        align-items: center;
+        display: flex !important;
+        flex-direction: column;
+        gap: 4rem;
+        justify-content: center;
+        max-width: 1024px;
+    }
+}
+
+.remove-scrolling{
+    overflow: hidden;
+}
+
+/* 
+- remove-scroll class sur x et lien
+- fix toggleView
+ */
