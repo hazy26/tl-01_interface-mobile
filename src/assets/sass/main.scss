@@ -124,22 +124,19 @@ body{
         animation: reduceBannerHeight .2s forwards;
     }
 
-    .displayChange{
-        align-self: center;
-        align-items: center;
-        display: flex !important;
-        flex-direction: column;
-        gap: 4rem;
-        justify-content: center;
-        max-width: 1024px;
-    }
+    
+}
+
+.displayChange{
+    align-self: center;
+    align-items: center;
+    display: flex !important;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    max-width: 1024px;
 }
 
 .remove-scrolling{
     overflow: hidden;
 }
-
-/* 
-- remove-scroll class sur x et lien
-- fix toggleView
- */

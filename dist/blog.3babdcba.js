@@ -117,9 +117,6 @@ button.textContent = "Changer la disposition";
 main.appendChild(button);
 const toggleBtn = document.querySelector(".toggleView__btn");
 const container = document.querySelector(".card__container");
-toggleBtn.addEventListener("click", ()=>{
-    container.classList.toggle("displayChange");
-});
 const cardsContainer = document.createElement("ul");
 cardsContainer.classList.add("card__container");
 main.appendChild(cardsContainer);
@@ -141,5 +138,8 @@ function showArticle(btn) {
         }
     });
 }
+toggleBtn.addEventListener("click", ()=>{
+    cardsContainer.classList.toggle("displayChange");
+});
 
 //# sourceMappingURL=blog.3babdcba.js.map

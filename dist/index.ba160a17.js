@@ -15,7 +15,7 @@ function dialogs() {
         const dialog = document.querySelector(".dialog");
         dialog.classList.toggle("hidden");
         dialog.classList.toggle("open");
-        document.body.classList.add("remove-scrolling");
+        document.body.classList.toggle("remove-scrolling");
     }
 }
 dialogs();
@@ -23,7 +23,7 @@ const articleToggle = document.querySelectorAll(".article__dialog");
 articleToggle.forEach((dialog)=>{
     dialog.addEventListener("click", ()=>{
         dialog.classList.toggle("hidden");
-        document.body.classList.remove("remove-scrolling");
+        document.body.classList.toggle("remove-scrolling");
     });
 });
 

@@ -265,9 +265,6 @@ button.textContent = 'Changer la disposition';
 main.appendChild(button);
 const toggleBtn = document.querySelector('.toggleView__btn');
 const container = document.querySelector('.card__container');
-toggleBtn.addEventListener('click', () => {
-    container.classList.toggle('displayChange');
-});
 
 const cardsContainer = document.createElement('ul');
 cardsContainer.classList.add('card__container');
@@ -292,3 +289,7 @@ function showArticle(btn) {
         };
     });
 };
+
+toggleBtn.addEventListener('click', () => {
+    cardsContainer.classList.toggle('displayChange');
+});
