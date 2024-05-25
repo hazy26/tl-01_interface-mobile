@@ -55,7 +55,7 @@ const cards = [
         "Problèmes rencontrés",
         "https://picsum.photos/id/124/800/600",
         "https://picsum.photos/id/124/1600/1200",
-        "Quelques problèmes lors de la création du projets..."
+        "Ce travail se passa relativement bien pour ma part, excepté quelques embûches mineures."
     ),
     new Card(
         "Le Philodendron",
@@ -168,11 +168,11 @@ const articleDialogs = [
         "Problèmes rencontrés",
         "https://picsum.photos/id/124/800/600",
         "https://picsum.photos/id/124/1600/1200",
-        "Le contenu du premier article doit être à propos des problèmes que vous avez rencontrés et des solutions ou sources qui vous ont permis de les résoudre. Au moins, 250 mots sont attendus. Un lien externe = 1 mot. Le contenu des autres articles n'a pas d’importance",
+        "Lors de la création de ce projet je n'ai pas rencontrés beaucoup de problèmes d'envergure, mais bien quelques petites embûches. Principalement, ce fut au niveau du CSS, pour trouver les bons ajustements afin que le contenu soit bien disposer selon mon concept. Pour chacun de mes problèmes, j'ai réussi à trouver la une solution grâce à l'une des ressources suivantes: MDN Web Docs, Stack Overflow et W3Schools. L'un des problèmes que j'ai dû régler était lors de l'apparition d'un dialog, soit le menu de navigation ou encore un article, le scroll de la page continuait de fonctionner sur le contenu principal. Pour régler le problème, j'ai simplement ajouter, dans la fonction qui gère l'affichage des dialogs, un toggle sur le body activant et désactivant la classe 'remove-scrolling'. Dans cette classe, j'utilise simplement 'overflow: hidden', ce qui permet de désactiver le scroll de la page.",
         "Alexis Turcotte",
         "14 juin 2024",
         "Temps de lecture: 2 min.",
-        "250 mots"
+        "163 mots"
     ),
     new Article(
         "Le Philodendron",
